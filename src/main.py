@@ -318,6 +318,8 @@ def song_cover_pipeline(song_input, voice_model, pitch_change, keep_files,
 
 
 if __name__ == '__main__':
+    print("hello")
+    """
     parser = argparse.ArgumentParser(description='Generate a AI cover song in the song_output/id directory.', add_help=True)
     parser.add_argument('-i', '--song-input', type=str, required=True, help='Link to a YouTube video or the filepath to a local mp3/wav file to create an AI cover of')
     parser.add_argument('-dir', '--rvc-dirname', type=str, required=True, help='Name of the folder in the rvc_models directory containing the RVC model file and optional index file to use')
@@ -340,8 +342,7 @@ if __name__ == '__main__':
     parser.add_argument('-oformat', '--output-format', type=str, default='mp3', help='Output format of audio file. mp3 for smaller file size, wav for best quality')
     args = parser.parse_args()
 
-    print("hello")
-    """rvc_dirname = args.rvc_dirname
+    rvc_dirname = args.rvc_dirname
     if not os.path.exists(os.path.join(rvc_models_dir, rvc_dirname)):
         raise Exception(f'The folder {os.path.join(rvc_models_dir, rvc_dirname)} does not exist.')
 
