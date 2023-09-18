@@ -340,7 +340,7 @@ if __name__ == '__main__':
     parser.add_argument('-oformat', '--output-format', type=str, default='mp3', help='Output format of audio file. mp3 for smaller file size, wav for best quality')
     args = parser.parse_args()
 
-    print "hello"
+    print("hello")
     """rvc_dirname = args.rvc_dirname
     if not os.path.exists(os.path.join(rvc_models_dir, rvc_dirname)):
         raise Exception(f'The folder {os.path.join(rvc_models_dir, rvc_dirname)} does not exist.')
