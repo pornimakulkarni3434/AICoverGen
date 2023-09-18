@@ -268,7 +268,7 @@ def song_cover_pipeline(song_input, voice_model, pitch_change, keep_files,
 
         song_dir = os.path.join(output_dir, song_id)
 
-        return "hello";
+        return "hello"
         """if not os.path.exists(song_dir):
             os.makedirs(song_dir)
             orig_song_path, vocals_path, instrumentals_path, main_vocals_path, backup_vocals_path, main_vocals_dereverb_path = preprocess_song(song_input, mdx_model_params, song_id, is_webui, input_type, progress)
@@ -340,7 +340,8 @@ if __name__ == '__main__':
     parser.add_argument('-oformat', '--output-format', type=str, default='mp3', help='Output format of audio file. mp3 for smaller file size, wav for best quality')
     args = parser.parse_args()
 
-    rvc_dirname = args.rvc_dirname
+    return "hello"
+    """rvc_dirname = args.rvc_dirname
     if not os.path.exists(os.path.join(rvc_models_dir, rvc_dirname)):
         raise Exception(f'The folder {os.path.join(rvc_models_dir, rvc_dirname)} does not exist.')
 
@@ -353,4 +354,4 @@ if __name__ == '__main__':
                                      reverb_rm_size=args.reverb_size, reverb_wet=args.reverb_wetness,
                                      reverb_dry=args.reverb_dryness, reverb_damping=args.reverb_damping,
                                      output_format=args.output_format)
-    print(f'[####]{cover_path}[****]')
+    print(f'[####]{cover_path}[****]')"""
