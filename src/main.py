@@ -8,7 +8,7 @@ import subprocess
 from contextlib import suppress
 from urllib.parse import urlparse, parse_qs
 
-import gradio as gr
+
 import librosa
 import numpy as np
 import soundfile as sf
@@ -20,6 +20,7 @@ from pydub import AudioSegment
 
 from mdx import run_mdx
 from rvc import Config, load_hubert, get_vc, rvc_infer
+import gradio as gr
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
