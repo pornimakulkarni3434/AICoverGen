@@ -269,8 +269,8 @@ def song_cover_pipeline(song_input, voice_model, pitch_change, keep_files,
 
         song_dir = os.path.join(output_dir, song_id)
 
-        return "hello"
-        """if not os.path.exists(song_dir):
+        
+        if not os.path.exists(song_dir):
             os.makedirs(song_dir)
             orig_song_path, vocals_path, instrumentals_path, main_vocals_path, backup_vocals_path, main_vocals_dereverb_path = preprocess_song(song_input, mdx_model_params, song_id, is_webui, input_type, progress)
 
@@ -312,15 +312,13 @@ def song_cover_pipeline(song_input, voice_model, pitch_change, keep_files,
                 if file and os.path.exists(file):
                     os.remove(file)
 
-        return ai_cover_path"""
+        return ai_cover_path
 
     except Exception as e:
         raise_exception(str(e), is_webui)
 
 
 if __name__ == '__main__':
-    print("hello")
-    """
     parser = argparse.ArgumentParser(description='Generate a AI cover song in the song_output/id directory.', add_help=True)
     parser.add_argument('-i', '--song-input', type=str, required=True, help='Link to a YouTube video or the filepath to a local mp3/wav file to create an AI cover of')
     parser.add_argument('-dir', '--rvc-dirname', type=str, required=True, help='Name of the folder in the rvc_models directory containing the RVC model file and optional index file to use')
@@ -356,4 +354,4 @@ if __name__ == '__main__':
                                      reverb_rm_size=args.reverb_size, reverb_wet=args.reverb_wetness,
                                      reverb_dry=args.reverb_dryness, reverb_damping=args.reverb_damping,
                                      output_format=args.output_format)
-    print(f'[####]{cover_path}[****]')"""
+    print(f'[####]{cover_path}[****]')
